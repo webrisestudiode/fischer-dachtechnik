@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block legal pages from indexing
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+Sitemap: https://webrisestudiode.github.io/fischer-dachtechnik/sitemap.xml
