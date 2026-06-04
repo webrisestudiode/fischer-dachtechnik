@@ -879,6 +879,12 @@ textarea.form-control { resize: vertical; min-height: 130px; }
 ======================== */
 #personalized-banner {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99999;
   background: linear-gradient(90deg, #2C1A0E, #3D2B1F);
   color: white;
   text-align: center;
