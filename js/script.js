@@ -230,7 +230,11 @@ if (contactForm) {
       if (banner && nameEl) {
         nameEl.textContent = name;
         banner.style.display = 'block';
-        document.body.style.paddingTop = (banner.offsetHeight + 4) + 'px';
+        // Zu <html> verschieben – body overflow-x:hidden bricht sonst position:fixed
+        if (banner.parentNode !== document.documentElement) {
+          document.documentElement.appendChild(banner);
+        }
+        document.body.style.paddingTop = '50px';
       }
     }
   }
