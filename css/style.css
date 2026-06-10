@@ -1063,28 +1063,27 @@ textarea.form-control { resize: vertical; min-height: 130px; }
 
 /* ── Mobile fixes 390px ─────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  /* Kontakt: 1fr 1.3fr → 1 Spalte stapeln */
+  /* Kontakt: 1fr 1.3fr → 1 Spalte */
   [style*="grid-template-columns:1fr 1.3fr"],
   [style*="grid-template-columns: 1fr 1.3fr"] {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
   }
-  /* Referenzen + Kontakt: 1fr 1fr Inline-Grids stapeln */
-  [style*="grid-template-columns:1fr 1fr"],
-  [style*="grid-template-columns: 1fr 1fr"] {
+  /* Formular-Innengrids (gap:16px) → 1 Spalte – NICHT Vorher/Nachher */
+  [style*="grid-template-columns:1fr 1fr"][style*="gap:16px"],
+  [style*="grid-template-columns: 1fr 1fr"][style*="gap: 16px"] {
     grid-template-columns: 1fr !important;
-    gap: 10px !important;
   }
-  /* Vorher/Nachher Bilder: Höhe anpassen */
-  [style*="height:320px"] {
-    height: 220px !important;
-  }
-  /* Formular im Kontakt: weißen Container volle Breite */
-  .contact-info-box {
-    margin-bottom: 16px;
-  }
-  /* Map-Placeholder kleinhalten */
-  [style*="height:200px"] {
+  /* Vorher/Nachher nebeneinander halten, Bilder kleiner */
+  [style*="overflow:hidden"][style*="grid-template-columns:1fr 1fr"] img,
+  [style*="overflow:hidden"][style*="grid-template-columns: 1fr 1fr"] img {
     height: 150px !important;
+    object-fit: cover;
   }
+  .contact-info-box { margin-bottom: 16px; }
+  [style*="height:200px"] { height: 150px !important; }
+  /* Kein horizontales Scrollen */
+  body { overflow-x: hidden; }
+  /* Buttons mind. 44px */
+  .btn { min-height: 44px; }
 }
