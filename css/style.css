@@ -1,4 +1,4 @@
-html { overflow-x: hidden; }
+html { overflow-x: clip; }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
@@ -1086,4 +1086,22 @@ textarea.form-control { resize: vertical; min-height: 130px; }
   body { overflow-x: hidden; }
   /* Buttons mind. 44px */
   .btn { min-height: 44px; }
+  /* Über uns: 1fr 1fr grid → 1 Spalte auf Mobile */
+  [style*="grid-template-columns:1fr 1fr"][style*="gap:64px"],
+  [style*="grid-template-columns: 1fr 1fr"][style*="gap: 64px"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  /* Alle Formulare volle Breite */
+  form, .form-group, .form-control, .form-select, select, textarea, input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  /* Alle Buttons volle Breite */
+  .btn { width: 100%; justify-content: center; }
+  /* Notdienst/Emergency Banner – Text umbrechen */
+  .emergency-banner { white-space: normal; word-wrap: break-word; }
+  /* Navbar immer sichtbar (sticky fix) */
+  .header { position: -webkit-sticky; position: sticky; top: 0; z-index: 900; }
 }

@@ -130,7 +130,7 @@
             <li style="list-style:disc;">Zuverlässigkeit und Teamgeist</li>
           </ul>
         </div>
-        <a href="kontakt.html" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Jetzt bewerben</a>
+        <a href="#bewerbungsformular" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Jetzt bewerben</a>
       </div>
 
       <!-- Job 2 -->
@@ -153,7 +153,7 @@
             <li style="list-style:disc;">Zuverlässigkeit, Pünktlichkeit, Lernbereitschaft</li>
           </ul>
         </div>
-        <a href="kontakt.html" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Jetzt bewerben</a>
+        <a href="#bewerbungsformular" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Jetzt bewerben</a>
       </div>
 
       <!-- Job 3 – spontaneous application -->
@@ -168,6 +168,68 @@
         <a href="kontakt.html" class="btn btn-outline-primary"><i class="fa-solid fa-envelope"></i> Nachricht schicken</a>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- Bewerbungsformular -->
+<section class="section-padding bg-light" id="bewerbungsformular">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="section-eyebrow">Direktbewerbung</span>
+      <h2>Jetzt bewerben</h2>
+      <p>Füllen Sie das Formular aus – wir melden uns innerhalb von 48 Stunden.</p>
+    </div>
+    <div style="max-width:680px; margin:0 auto;">
+      <form id="application-form" data-validate style="background:white; border-radius:var(--border-radius-lg); padding:40px; box-shadow:var(--shadow-md);">
+        <div class="form-group">
+          <label class="form-label">Name *</label>
+          <input type="text" name="name" class="form-control" placeholder="Vor- und Nachname" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">E-Mail *</label>
+          <input type="email" name="email" class="form-control" placeholder="ihre@email.de" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Telefon</label>
+          <input type="tel" name="telefon" class="form-control" placeholder="0711 …">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Gewünschte Stelle *</label>
+          <select name="stelle" class="form-select" required>
+            <option value="">Bitte wählen …</option>
+            <option value="geselle">Dachdeckergeselle (m/w/d) – Vollzeit</option>
+            <option value="azubi">Auszubildender Dachdecker (m/w/d)</option>
+            <option value="initiativ">Initiativbewerbung</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Berufserfahrung</label>
+          <select name="erfahrung" class="form-select">
+            <option value="">Bitte wählen …</option>
+            <option value="keine">Keine (Berufseinsteiger / Azubi)</option>
+            <option value="1-3">1 – 3 Jahre</option>
+            <option value="3-5">3 – 5 Jahre</option>
+            <option value="5+">Mehr als 5 Jahre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Kurzbewerbung *</label>
+          <textarea name="nachricht" class="form-control" rows="5" placeholder="Erzählen Sie uns kurz von sich: Was motiviert Sie? Welche Qualifikationen bringen Sie mit?" required></textarea>
+        </div>
+        <div style="margin-top:8px; display:flex; align-items:flex-start; gap:12px; margin-bottom:20px;">
+          <input type="checkbox" id="ds-check" name="datenschutz" required style="margin-top:3px; flex-shrink:0;">
+          <label for="ds-check" style="font-size:0.88rem; color:var(--color-gray); line-height:1.5; cursor:pointer;">
+            Ich stimme der Verarbeitung meiner Daten gemäß <a href="datenschutz.html" style="color:var(--color-primary);">Datenschutzerklärung</a> zu. *
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+          <i class="fa-solid fa-paper-plane"></i> Bewerbung absenden
+        </button>
+        <p style="text-align:center; font-size:0.8rem; color:var(--color-gray); margin-top:12px;">
+          <i class="fa-solid fa-shield-halved"></i> Kostenlos & unverbindlich · SSL-verschlüsselt
+        </p>
+      </form>
     </div>
   </div>
 </section>
